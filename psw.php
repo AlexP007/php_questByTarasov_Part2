@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alexanderpanteleev
- * Date: 31.07.18
- * Time: 21:32
- */
-
 # орпеделение констант для логина и пароля
 
 define("LOGIN", "admin");
