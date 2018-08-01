@@ -41,7 +41,7 @@ $submit = isset($_POST[$form["formName"][2]]) ? $_POST[$form["formName"][2]] : "
         <?php
          #в сулчае верных данных, скрываем форму
             if ($login==LOGIN && $password==PSW)
-                echo"display:none"?>
+                echo"display:none" ?>
             
 
         }
