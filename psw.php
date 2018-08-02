@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: alexanderpanteleev
+ * Date: 31.07.18
+ * Time: 21:32
+ */
+
 # орпеделение констант для логина и пароля
 
 define("LOGIN", "admin");
@@ -38,12 +45,6 @@ $submit = isset($_POST[$form["formName"][2]]) ? $_POST[$form["formName"][2]] : "
         }
         form {
             margin: 40px 0;
-        <?php
-         #в сулчае верных данных, скрываем форму
-            if ($login==LOGIN && $password==PSW)
-                echo"display:none" ?>
-            
-
         }
         a {
             display: block;
@@ -56,7 +57,8 @@ $submit = isset($_POST[$form["formName"][2]]) ? $_POST[$form["formName"][2]] : "
 </style>
 </head>
 <body>
-
+    <?php   #в сулчае верных данных, скрываем форму
+            if ($login!=LOGIN && $password!=PSW):?>
     <form action="#" method="POST">
         <input type="hidden" name="<?=$form["formName"][2]?>" value="<?=$form["formName"][2]?>">
         <div class="form-group">
@@ -69,6 +71,7 @@ $submit = isset($_POST[$form["formName"][2]]) ? $_POST[$form["formName"][2]] : "
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    <?php endif;?>
 
     <?php
         # если данные введены верно, показываем 4 ссылки
